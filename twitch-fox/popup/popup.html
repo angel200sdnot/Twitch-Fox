@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css"/>
+  </head>
+
+  <body>
+    <div class="screenLock hidden" id="screenLock">
+      <div class="lockBackground"></div>
+      <div class="enlargedPreview" id="enlargedPreview"></div>
+    </div>
+    <div class="topBar">
+      <div class="menuButton settings" id="settings">
+        <span class="tooltip" id="settingsTip"></span>
+      </div>
+      <div class="searchBar">
+        <div class="menuButton search" id="search">
+          <span class="tooltip" id="searchTip"></span>
+        </div>
+        <input type="text" id="searchBox" class="searchBox">
+      </div>
+      <div class="menuButton avatar" id="avatar">
+        <span class="tooltip" id="avatarTip"></span>
+      </div>
+      <div class="menuButton login" id="login">
+        <span class="loginText" id="loginText"></span>
+        <span class="tooltip" id="loginTip"></span>
+      </div>
+    </div>
+    <div class="leftBar">
+      <div class="menuButton tab games" id="games">
+        <span class="tooltip" id="gamesTip"></span>
+      </div>
+      <div class="menuButton tab streams" id="streams">
+        <span class="tooltip" id="streamsTip"></span>
+      </div> 
+      <div class="menuButton tab videos" id="videos">
+        <span class="tooltip" id="videosTip"></span>
+      </div>
+      <div class="menuButton tab clips" id="clips">
+        <span class="tooltip" id="clipsTip"></span>
+      </div>
+      <div class="menuButton tab channels" id="channels">
+        <span class="tooltip" id="channelsTip"></span>
+      </div>
+      <div class="leftDivider"></div>
+      <div class="menuButton tab followedStreams" id="followedStreams">
+        <span class="tooltip" id="followedStreamsTip"></span>
+      </div> 
+      <div class="menuButton tab followedVideos" id="followedVideos">
+        <span class="tooltip" id="followedVideosTip"></span>
+      </div>
+      <div class="menuButton tab followedClips" id="followedClips">
+        <span class="tooltip" id="followedClipsTip"></span>
+      </div>
+      <div class="menuButton tab followedChannels" id="followedChannels">
+        <span class="tooltip" id="followedChannelsTip"></span>
+      </div>
+      <div class="leftDivider"></div>
+      <div class="menuButton tab about" id="about">
+        <span class="tooltip" id="aboutTip"></span>
+      </div>
+    </div>
+    <div class="contentArea" id="contentArea">
+
+
+      
+      <div id="Example Channel Content" class="content channel">
+        <div class = "contentBack channel">
+          <div class="hoverBack"></div>
+          <div class="channelAvatar"></div>
+          <div class="channelName">ALOHADANCE</div>
+          <div class="hideUntilHover">
+            <div class="status channel">A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A </div>
+            <div class="contentButton bottom channel twitch">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom channel chat">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom channel favorite">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom channel follow">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton side channel smallVideos">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton side channel smallClips">
+              <span class="tooltip"></span>
+            </div>
+          </div>    
+        </div>
+        <div class="cornerGame channel">
+          <span class="tooltip noDisable">Dota 2</span>
+        </div>
+        <span class="tag"></span>
+      </div>   
+      
+      
+      
+      
+      <div id="Example Game Content" class="content game hide">
+        <div class = "contentBack game">
+          <div class="hoverBack"></div>
+          <div class="hideUntilHover">
+            <div class="contentButton bottom game twitch">
+              <span class="tooltip"></span>
+            </div>
+
+            <div class="contentButton side game smallStreams">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton side game smallVideos">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton side game smallClips">
+              <span class="tooltip"></span>
+            </div>
+          </div>
+        </div>
+        <span class="gameTitle">
+          <div class="bottomText gameTop">
+            Dota 2
+          </div>
+          <span class="tooltip noDisable"></span>
+        </span>
+        <div class="bottomText gameBottom">1,332,942 viewers</div>
+        <span class="tag"></span>
+      </div>
+      
+      
+      
+      <div id="Example Stream Content" class="content stream hide">
+        <div class = "contentBack stream">
+          <div class="hoverBack"></div>
+          <div class="uptimeIcon">
+            <span class="tooltip noDisable"></span>
+          </div>
+          <div class="uptime">Uptime</div>
+          <div class="hideUntilHover">
+            <div class="status stream">Status goes here.</div>
+            <div class="contentButton bottom stream twitch">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom stream popout">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom stream chat">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom stream enlarge">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom stream favorite">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton bottom stream follow">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton side stream smallVideos">
+              <span class="tooltip"></span>
+            </div>
+            <div class="contentButton side stream smallClips">
+              <span class="tooltip"></span>
+            </div>
+          </div>    
+        </div>
+        <div class="cornerGame">
+          <span class="tooltip noDisable">Dota 2</span>
+        </div>
+        <div class="bottomText stream">999,999,999 ... viewers on ... ASDSADASDSADSADSADSADASDSADASDSAASDS</div>
+        <span class="tag"></span>
+      </div>
+      
+      
+      
+      
+   
+      
+      
+      
+      
+
+
+
+
+
+
+
+    </div>
+    <div class="contentArea hide" id="aboutPage">
+      <div class="bigTwitchFox"></div>
+      <span class="versionText" id="version"></span>
+      <div id="aboutTextNewUser" class="hide">
+        <div class="aboutText bold" id="aboutTextNewUser1"></div>
+        <div class="aboutText" id="aboutTextNewUser2"></div>
+        <div class="aboutText" id="aboutTextNewUser3"></div>
+        <div class="aboutText italic" id="aboutDeveloperName"></div>
+        <div class="aboutButton version" id="aboutWhatsNewButton"></div>
+      </div>
+      <div id="aboutTextWhatsNew" class="hide">
+        <div class="aboutText bold version" id="aboutTextWhatsNew1"></div>
+        <div class="aboutText" id="aboutTextWhatsNew2"></div>
+        <div class="aboutButton" id="aboutTellMoreButton"></div>
+      </div>
+      <div id="aboutTextAbout" class="hide">
+        <div class="aboutText" id="aboutTextAbout1"></div>
+        <div class="aboutText" id="aboutTextAbout2"></div>
+        <div class="aboutText italic" id="aboutDeveloperName"></div>
+        <div class="aboutButton small" id="addonPage"></div>
+        <div class="aboutButton small" id="githubPage"></div>
+        <div class="aboutButton small" id="steamPage"></div>
+        <div class="contactInfo" id="email"></div>
+        <div class="contactInfo" id="discord"></div>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+
+</html>
