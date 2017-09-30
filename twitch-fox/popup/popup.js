@@ -457,7 +457,6 @@ function getAPIResults() {
         Array.prototype.push.apply(results[0].content, data.top);
         results[0].type = "game";
         results[0].scroll = contentArea.scrollTop;
-        bp.setResults(results);
         updatePage();
       });
       break;
@@ -467,7 +466,6 @@ function getAPIResults() {
         Array.prototype.push.apply(results[0].content, data.streams);
         results[0].type = "stream";
         results[0].scroll = contentArea.scrollTop;
-        bp.setResults(results);
         updatePage();
       });
       break;
@@ -485,7 +483,7 @@ function getAPIResults() {
 function getSearch(api, target, addition) {
   var results = bp.getResults();
   if (!addition) {
-    results.push(bp.defaultResults()[0]);
+    bp.pushEmptyResult();
   }
   var len = results.length;
   switch(api) {
@@ -496,7 +494,6 @@ function getSearch(api, target, addition) {
           results[len - 1].api = api;
           results[len - 1].target = target;
           results[len - 1].scroll = contentArea.scrollTop;
-          bp.setResults(results);
           updatePage();
         });
       break;
@@ -514,9 +511,6 @@ function updatePage() {
   
   while (contentArea.hasChildNodes()) {
     contentArea.removeChild(contentArea.firstChild);
-  }
-  for (var i = 0; i < results.length; i++) {
-      console.log(results[i]);
   }
   for (var i = 0; i < results[len - 1].content.length; i += 1) {
     addCard(results[len - 1].content[i], results[len - 1].type);

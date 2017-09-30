@@ -18,6 +18,14 @@ function setResults(newResults) {
   results = newResults;
 }
 
+function pushResult(result) {
+  results.push(Object.assign({}, result))
+}
+
+function pushEmptyResult() {
+  results.push({content: [], type: "", api: "", target: "", scroll: 0});
+}
+
 function myTest() {
   console.log("Hi");
 }
